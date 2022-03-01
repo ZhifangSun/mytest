@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/heft" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/heft/HEFT/component" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/heft/HEFT/util" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/heft/HEFT" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/heft/HEFT/.idea" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/heft/HEFT/.idea/inspectionProfiles" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/heft/HEFT/service" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/heft/HEFT/system" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/heft/HEFT/SCHEDULER" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/heft/HEFT/CONFIG" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GABUDGET" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GABUDGET/.idea" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GABUDGET/.idea/inspectionProfiles" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GABUDGET/COMPONENT" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GABUDGET/CONFIG" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GABUDGET/SCHEDULER" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GABUDGET/UTIL" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GABUDGET/result" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GABUDGET/service" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GABUDGET/system" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

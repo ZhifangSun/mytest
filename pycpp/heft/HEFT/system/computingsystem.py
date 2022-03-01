@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+# *-* coding:utf8 *-*
+
+"""
+类别: 系统组件
+名称: 计算系统类
+作者: strong
+邮件: jqjiang@hnist.edu.cn
+日期: 2020年3月20日
+说明: 单例模式, 计算系统
+"""
+
+from component import *
+from util import genericutils as gu
+
+
+class ComputingSystem(object):
+    instance = None  # 用于返回单例
+
+    init_flag = False  # 初始化标记
+
+    processors = []  # 处理器集, 类属性
+
+    applications = []  # 应用集, 类属性
+
+    # 私有方法, 用于向内存申请空间
+    def __new__(cls, *args, **kwargs):
+        if cls.instance is None:  # 如果实例尚未生成, 则:
+            cls.instance = super().__new__(cls)  # 生成它
+        return cls.instance  # 并将其返回
+
+    # 构造函数, 初始化本类
+    def __init__(self, processors=None, applications=None):
+        if ComputingSystem.init_flag:  # 如果初始化标志为真, 则:
+            return  # 直接中断. 表示只初始化一遍, 如此可以确保内存中只有一个计算系统类存在
+        self.processors = processors  #
+        self.applications = applications  #
+        ComputingSystem.init_flag = True  # 置初始化标志为真
+
+    # 初始化计算系统, 类方法
+    @classmethod
+    def init(cls, processor_number):
+        ComputingSystem.init_processors(processor_number)  # 初始化处理器集
+
+    # 初始化处理器集, 类方法
+    @classmethod
+    def init_processors(cls, processor_number):
+        for i in range(processor_number):  # 遍历处理器数3
+            p = processor.Processor("p%d" % (i + 1))      # 命名处理器, 循环变量+1
+            # p = processor.Processor("p%d" % i)  # 命名处理器, 循环变量
+            cls.processors.append(p)  # 向处理器集中添加命名后的处理器
+
+    # 清洗处理器 —— 清空驻留任务集, 类方法
+    @classmethod
+    def clear_processors(cls):
+        for p in cls.processors:
+            p.resident_tasks.clear()
+
+    # 清空应用
+    @classmethod
+    def clear_applications(cls):
+        cls.applications.clear()
+
+    # 重置处理器
+    @classmethod
+    def reset_processors(cls):
+        cls.clear_processors()
+
+    # 计算系统重置
+    @classmethod
+    def reset(cls):
+        cls.reset_processors()
